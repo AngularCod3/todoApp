@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body{
+    background-color: #F5F5F5;
+}
+
+.mat-checkbox-inner-container {
+    margin: 3px 8px auto 0 !important;
+  }
+
+  .mat-checkbox{
+    opacity: 0.7 !important;
+  }
+
+  @media screen and (min-width: 601px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    html {
+      font-size: 6px;
+    }
+  }

@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 flexContainer">
+      <input autofocus placeholder="Add your task here"
+        (keydown.enter)="this.onKeyDown($event)"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 flexContainer">
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let task of this.tasks; let ind = index;" cdkDrag>
+            <div class="container">
+              <div class="row">
+                <div class="col-1 flexContainer">
+                  <mat-checkbox [checked]="task.status === 'Completed'" (change)="this.checkItem($event, ind)" ></mat-checkbox>
+                </div>
+                <div class="col-10 colWithoutMargin">
+                    <p [ngStyle]="{'opacity': task.status === 'Active'? '1' : '0.3',
+                                   'textDecoration': task.status === 'Active'? 'none' : 'line-through'}">{{task.taskText}}</p>
+                </div>
+                <div class="col-1 colWithoutMargin" (click)="this.removeItem(ind)">
+                    <span class="closeButton">&times;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
