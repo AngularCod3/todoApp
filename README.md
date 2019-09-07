@@ -1,5 +1,10 @@
 # TodoApp
 
+The live version can be found here:
+https://angularcod3.github.io/todoApp/
+
+This is a todo app inspired by todoMVC. However, this has been written from scratch with the help of bootstrap and Angular Material.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Development server
