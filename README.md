@@ -5,6 +5,12 @@ https://angularcod3.github.io/todoApp/
 
 This is a todo app inspired by todoMVC. However, this has been written from scratch with the help of bootstrap and Angular Material.
 
+You can:
+a) Add items to todo list
+b) Reorder them according to your priority (Drag and drop).
+c) Mark them as complete.
+d) Delete items from list
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Development server
