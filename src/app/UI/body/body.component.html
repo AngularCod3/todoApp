@@ -7,7 +7,26 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12 flexContainer">
+    <div class="col-12 flexContainer">
+      <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box flexContainer" *ngFor="let task of this.tasks; let ind = index;" cdkDrag>
+            
+              
+                  <mat-checkbox style="padding-right:1.5rem;" [checked]="task.status === 'Completed'" (change)="this.checkItem($event, ind)" ></mat-checkbox>
+             
+                  <p style="width:70%; margin:0" [ngStyle]="{'opacity': task.status === 'Active'? '1' : '0.3',
+                  'textDecoration': task.status === 'Active'? 'none' : 'line-through'}">{{task.taskText}}</p>
+              
+                  <span class="closeButton" (click)="this.removeItem(ind)">&times;</span>
+              
+                
+                
+            
+          </div>
+
+      </div>
+    </div>
+    <!--div class="col-md-12 flexContainer">
         <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
           <div class="example-box" *ngFor="let task of this.tasks; let ind = index;" cdkDrag>
             <div class="container">
@@ -26,6 +45,7 @@
             </div>
           </div>
         </div>
-    </div>
+    </div-->
+
   </div>
 </div>
