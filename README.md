@@ -11,7 +11,7 @@ c) Mark them as complete.<br>
 d) Delete items from list<br>
 
 The live version can be found here:
-https://angularcod3.github.io/todoApp/
+https://javapyscript.github.io/todoApp/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
